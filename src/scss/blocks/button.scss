@@ -1,0 +1,55 @@
+.button {
+    display: inline-block;
+    padding: .5em 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5em;
+    font-size: .7rem;
+    @include laptop {
+        font-size: 1rem;
+    }
+    font-weight: 600;
+    
+
+
+    &--white {
+        background-color: #FFF;
+        box-shadow: 0 5px 10px rgb(0 0 0 / .1);
+        color: var(--dark-cyan);
+        padding: .3rem 1.5rem;
+        @include laptop {
+            padding: 1rem 4rem;
+        }
+    }
+    &--white:hover {
+        color: var(--grayish);
+    }
+
+    &--pink {
+        background-color: var(--pink-color);
+        box-shadow: 0 5px 10px rgb(0 0 0 / .2);
+        color: #fff;
+        padding: .8rem 3.3rem;
+        @include laptop {
+            padding: 1.2rem 4rem;
+            display: block;
+            width: 320px;
+        }
+        top: 600px;
+    }
+    &--pink:hover {
+        background-color: var(--pink-hover);
+    }
+
+
+    &--footer {
+        @include laptop {
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            padding: 1.5rem 3rem;
+            font-size: 1.2rem;
+        }
+
+    }
+}

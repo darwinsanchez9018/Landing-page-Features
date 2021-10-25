@@ -1,0 +1,127 @@
+@import "mixins/breakpoints";
+
+.footer {
+    background-color: var(--dark-cyan);
+    margin-top: -5rem;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include laptop {
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem 7rem;
+        padding-bottom: 3rem;
+    }
+
+    &__data {
+        @include laptop {
+            // display: flex;
+        }
+    }
+
+    &__info {
+        display: flex;
+        margin-bottom: 2rem;
+        @include laptop {
+            width: 370px;
+        }
+    }
+
+    &__logo {
+        filter:brightness(0)invert(1);
+        max-width: 50%;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        @include laptop {
+            max-width: 80%;
+        }
+    }
+
+    &__icon {
+        display: block;
+        height: 20px;
+        padding-right: 2rem;
+    }
+
+    &__text {
+        margin: 0;
+        color: #fff;
+        font-size: 1.03rem;
+        @include laptop {
+            font-size: .9rem;
+        }
+    }
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 4rem 0;
+    @include laptop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 250px;
+        width: 400px;
+        padding-top: 100px;
+    }
+
+    &__item {
+        margin-bottom: 1.5rem;
+        @include laptop {
+        margin-bottom: 0;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: #fff;
+    }
+    &__link:hover {
+        text-decoration: underline 1.5px;
+    }
+}
+
+
+.copy {
+    text-align: center;
+    @include laptop {
+        padding-top: 160px;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        @include laptop {
+            margin-left: 0;
+            padding-bottom: 150px;
+        }
+        width: 130px;
+        height: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 2rem;
+    }
+    &__social {
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        padding: .4rem;
+        justify-items: center;
+    }
+    &__social:hover {
+        color: var(--pink-color);
+        border: 1px solid var(--pink-color);
+    }
+
+    &__info {
+        color: #fff;
+        font-size: .7rem;
+        padding-bottom: 1rem;
+    }
+    &__link {
+        color: var(--pink-color);
+        text-decoration: none;
+    }
+}

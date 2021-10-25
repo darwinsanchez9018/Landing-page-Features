@@ -1,0 +1,59 @@
+include mixins/article
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="public/css/styles.css")
+        title FEATURES LandingPage
+    body
+        header.header
+            .header__topbar
+                img(src="public/assets/images/logo.svg", alt="LOGO").header__logo
+                a(href="#").button.button--white Try It Free
+            .header__banner
+                .header__info
+                    h1.header__title Build The Community Your Fans Will Love
+                    p.header__text Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
+                    a(href="#").button.button--pink Get Started For Free
+                img(src="public/assets/images/illustration-mockups.svg", alt="mockups").header__img
+        main.main
+            +article("Grow Together", "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.", "illustration-grow-together")
+            +article(
+                "Flowing Conversations", "You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.", "illustration-flowing-conversation", "left")
+            +article("Your Users", " It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.", "illustration-your-users")
+        aside.aside
+            h2.aside__title Ready To Build Your Community?
+            a(href="#").button.button--pink.button--footer  Get Started For Free
+        footer.footer
+            .footer__data
+                img(src="public/assets/images/logo.svg", alt="logo").footer__logo
+                .footer__info
+                    img(src="public/assets/images/icon-location.svg", alt="location").footer__icon
+                    p.footer__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                .footer__info
+                    img(src="public/assets/images/icon-phone.svg", alt="phone").footer__icon
+                    p.footer__text +1-543-123-4567
+                .footer__info
+                    img(src="public/assets/images/icon-email.svg", alt="email").footer__icon
+                    p.footer__text example@huddle.com
+            ul.list
+                li.list__item: a(href="#").list__link About Us
+                li.list__item: a(href="#").list__link What We Do
+                li.list__item: a(href="#").list__link FAQ
+                li.list__item: a(href="#").list__link Career
+                li.list__item: a(href="#").list__link Blog
+                li.list__item: a(href="#").list__link Contact Us
+            small.copy
+                .copy__socials
+                    a(href="#").copy__social
+                        <i class="fab fa-facebook-f"></i>
+                    a(href="#").copy__social
+                        <i class="fab fa-twitter"></i>
+                    a(href="#").copy__social
+                        <i class="fab fa-instagram"></i>
+                .copy__info © Copyright 2021 
+                    a(href="https://darwinsanchez9018.github.io/Frontend-Porfolio/" target="blank").copy__link Darwin Sánchez 
+                    |All rights reserved.
+        script(src="https://kit.fontawesome.com/a0ab449b77.js" crossorigin="anonymous")

@@ -1,0 +1,72 @@
+@import "mixins/breakpoints";
+
+.header {
+    background-image: url("../assets/images/bg-hero-mobile.svg");
+    @include laptop {
+        background-image: url("../assets/images/bg-hero-desktop.svg");
+        margin-bottom: 5rem;
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--pale-color);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: var(--dark-cyan);
+
+    &__topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 85px;
+        @include laptop {
+            padding: 1.5rem 4rem;
+            margin-bottom: 3rem;
+        }
+    }
+    &__logo {
+        width: 35%;
+        @include laptop {
+            width: 18%;
+        }
+    }
+
+
+    &__banner {
+        @include laptop {
+            display: flex;
+            padding: 0 3rem;
+        }
+    }
+    &__title {
+        font-size: 1.4rem;
+        @include laptop {
+            font-size: 2.8rem;
+            text-align: left;
+            margin-top: 4.5rem;
+
+        }
+        margin-bottom: 1.5rem;
+        padding: 0 .5rem;
+    }
+    &__text {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 2.3rem;
+        padding: 0 .7rem;
+        @include laptop {
+            text-align: left;
+            padding-right: 4rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+    }
+    &__img {
+        margin-top: 60px;
+        padding: 0 .5rem;
+        @include laptop {
+            max-width: 55%;
+            margin-top: 0;
+        }
+    }
+}

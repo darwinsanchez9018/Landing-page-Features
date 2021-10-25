@@ -1,0 +1,54 @@
+@import "mixins/breakpoints";
+
+.article {
+    display: flex;
+    flex-direction: column-reverse;
+    @include laptop {
+        flex-direction: row;
+    }
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 10px rgb(0 0 0 / .1);
+    margin-bottom: 3rem;
+
+    &__img {
+        padding: 3rem;
+        @include laptop {
+            max-width: 41%;
+        }
+    }
+
+    &__info {
+        padding: 1rem 2.2rem;
+        text-align: center;
+        @include laptop {
+            text-align: left;
+            margin: auto 4rem;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        color: var(--dark-cyan);
+        font-size: 1.2rem;
+        @include laptop {
+            font-size: 1.85rem;
+        }
+    }
+    &__text {
+        color: var(--grayish);
+        font-size: .9rem;
+        @include laptop {
+            font-size: 1.2rem;
+        }
+        line-height: 1.5;
+    }
+}
+
+.article:nth-last-child(2) {
+    flex-direction: column;
+    @include laptop {
+        flex-direction: row;
+    }
+    padding: 2rem 0;
+}
